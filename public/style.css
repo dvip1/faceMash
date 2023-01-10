@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruda&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* background-color: #579BB1; */
+    overflow: auto;
+}
+.navbar{
+    background-color: #F8F4EA;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+.forms{
+    margin: auto;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+.my-container{
+    background-color: #F8F4EA;
+    border-radius: 25px;
+    width: 90%;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+.my-container h1{
+    font-family: 'Ruda', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+button{
+    border-radius: 15px;
+}
+.fa-2x{
+    color: #0d6efd;
+}
+.fa-2x:hover{
+    color: #5186d6;
+    cursor: pointer;
+}
+.myBtn{
+    margin: 1rem 0;
+}
+.link{
+    margin-top: 0.5rem;
+    text-decoration: none;
+    color: #0d6efd;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
