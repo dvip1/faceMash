@@ -53,3 +53,19 @@ button{
     align-items: center;
     justify-content: center;
 }
+img{
+    width: 50%;
+    border-radius: 25px;
+}
+.my-col{
+    padding: 0.5rem;
+}
+.my-col p{
+    padding-left: 0.5rem    ;
+}
+.details{
+    text-align: center;
+}
+.fa-heart{
+    color: red;
+}
