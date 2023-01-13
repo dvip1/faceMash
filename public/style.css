@@ -4,33 +4,38 @@
     padding: 0;
 }
 body{
-    /* background-color: #579BB1; */
+    background: #DFD3C3;
     overflow: auto;
 }
 .navbar{
-    background-color: #F8F4EA;
+    background-color: rgba(248, 244, 234,0.5);
     border-radius: 15px;
     padding: 1rem;
     margin: 1rem 0;
 }
-.forms{
-    margin: auto;
-    text-align: center;
-    padding: 4rem 2rem;
-}
 .my-container{
-    background-color: #F8F4EA;
+    background-color: rgba(248, 244, 234,0.5);
     border-radius: 25px;
     width: 90%;
     padding: 2rem;
     margin: 2rem 0;
 }
 .my-container h1{
+    color: #594545;
     font-family: 'Ruda', sans-serif;
     font-size: 3rem;
     text-align: center;
+    padding-bottom: 1rem;
 }
-button{
+.forms{
+    margin: auto;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+ul{
+    text-align: left;
+}
+.btn{
     border-radius: 15px;
 }
 .fa-2x{

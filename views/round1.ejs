@@ -2,7 +2,7 @@
     <div class="center">
         <div class="container my-container">
             <h1>
-                <%= name %>'s favs
+                hi <%= name %>
             </h1>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 my-col center">
@@ -10,11 +10,15 @@
                         <div class="center">
                             <img src="images/<%=teacherArr[pointer].sex%>.png" alt="">
                             <div class="details">
-                                <p> Name: <%= teacherArr[pointer].name%>
-                                        <br>
-                                        Teaches: <%= teacherArr[pointer].sub%>
-                                </p>
-                                <button class="btn btn-primary" name="<%= pointer%>" type="submit">
+                                <ul>
+                                    <li>
+                                         <%= teacherArr[pointer].name%>
+                                    </li>
+                                    <li>
+                                         <%= teacherArr[pointer].sub%>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary" name="winner" type="submit" value="<%= pointer%>">
                                     Like <i class="fa-solid fa-thumbs-up"></i></i>
                                 </button>
                             </div>
@@ -26,11 +30,15 @@
                         <div class="center">
                             <img src="images/<%=teacherArr[pointer+1].sex%>.png" alt="">
                             <div class="details">
-                                <p> Name: <%= teacherArr[pointer+1].name%>
-                                        <br>
-                                        Teaches: <%= teacherArr[pointer+1].sub%>
-                                </p>
-                                <button class="btn btn-primary" type="submit" name="<%= pointer%>">
+                                <ul>
+                                    <li>
+                                         <%= teacherArr[pointer+1].name%>
+                                    </li>
+                                    <li>
+                                         <%= teacherArr[pointer+1].sub%>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary" type="submit" name="winner" value="<%= pointer+1%>">
                                     Like <i class="fa-solid fa-thumbs-up"></i></i>
                                 </button>
                             </div>
