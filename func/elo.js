@@ -1,4 +1,4 @@
-class elo{
+ class elo{
     constructor (rating1, rating2, whoWins){
         this.rating1= rating1;
         this.rating2= rating2;
@@ -22,7 +22,7 @@ class elo{
             this.rating2= this.rating2+ 32*(1-this.probB);
             this.rating1= this.rating1+ 32*(0-this.probA);
         }
-        return this.rating1
+        return parseInt(this.rating1);
     }
     get newRatingB(){
         if(this.whoWins){
@@ -33,10 +33,7 @@ class elo{
             this.rating2= this.rating2+ 32*(1-this.probB);
             this.rating1= this.rating1+ 32*(0-this.probA);
         }
-        return this.rating2
+        return parseInt(this.rating2);
     }
 }
-const newelo= new elo(100, 100, 0);
-console.log(newelo.probA);
-console.log(newelo.probB);
-console.log(newelo.newRatingA) 
+module.exports=elo;
