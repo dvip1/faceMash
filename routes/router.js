@@ -4,8 +4,8 @@ const bodyParser = require('body-parser');
 const teacherArr = require('../Database/data');
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: true }));
-const  elo = require ('../func/elo');
-const winnerLoser  = require('../func/winnerLoser');
+const elo = require('../func/elo');
+const winnerLoser = require('../func/winnerLoser');
 router.get('/', (req, res) => {
     res.render('welcome');
 });
@@ -15,12 +15,14 @@ router.post('/', (req, res) => {
     res.redirect('/round1');
 })
 router.get('/round1', (req, res) => {
-    //creating arrays if doesn't already exists
-    if (req.session.teacherArr == undefined)
-        req.session.teacherArr = teacherArr
+    // redirecting using conditions
     if (req.session.pointer + 2 >= req.session.teacherArr)
         res.redirect('/round2');
     if (req.session.name == '') res.redirect('/');
+
+    //creating arrays, variables if they don't  exists
+    if (req.session.teacherArr == undefined)
+        req.session.teacherArr = teacherArr
     if (req.session.master == undefined)
         req.session.master = [];
     if (req.session.loser == undefined)
@@ -32,11 +34,11 @@ router.get('/round1', (req, res) => {
 router.post('/round1', (req, res) => {
     //variables
     let objectWL = new winnerLoser(req.body.winner);
-    let loserP= objectWL.loser;
-    console.log("\n\n"+ loserP);
+    let loserP = objectWL.loser;
+    console.log("\n\n" + loserP);
     let winnerP = req.body.winner;
-    let objectElo= new elo(req.session.teacherArr[winnerP].score, req.session.teacherArr[loserP].score, 1)
-    let winnerScrInc =objectElo.newRatingA;
+    let objectElo = new elo(req.session.teacherArr[winnerP].score, req.session.teacherArr[loserP].score, 1)
+    let winnerScrInc = objectElo.newRatingA;
     let loserScoreDec = objectElo.newRatingB;
 
     //adding, pushing into arrray 
@@ -45,6 +47,7 @@ router.post('/round1', (req, res) => {
 
     req.session.loser[req.session.loser.length - 1].score = loserScoreDec;
     req.session.master[req.session.master.length - 1].score = winnerScrInc;
+
     //redirecting using condition
     if (req.session.pointer + 2 >= req.session.teacherArr.length) {
         res.redirect('/round2');

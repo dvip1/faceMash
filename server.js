@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const port = 3000;
-const ip = '192.168.225.222';
+const ip = '192.168.225.116';
 const homeRoute= require('./routes/router');
 app.use(session({
 	secret: 'nowThatsOurSecret',
