@@ -12,10 +12,10 @@
                             <div class="details">
                                 <ul>
                                     <li>
-                                         <%= teacherArr[pointer].name%>
+                                        <%= teacherArr[pointer].name%>
                                     </li>
                                     <li>
-                                         <%= teacherArr[pointer].sub%>
+                                        <%= teacherArr[pointer].sub%>
                                     </li>
                                 </ul>
                                 <button class="btn btn-primary" name="winner" type="submit" value="<%= pointer%>">
@@ -28,17 +28,17 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 my-col">
                     <form action="/round1" method="post">
                         <div class="center">
-                            <img src="images/<%=teacherArr[pointer+1].sex%>.png" alt="">
+                            <img src="images/<%=teacherArr[secPointer].sex%>.png" alt="">
                             <div class="details">
                                 <ul>
                                     <li>
-                                         <%= teacherArr[pointer+1].name%>
+                                        <%= teacherArr[secPointer].name%>
                                     </li>
                                     <li>
-                                         <%= teacherArr[pointer+1].sub%>
+                                        <%= teacherArr[secPointer].sub%>
                                     </li>
                                 </ul>
-                                <button class="btn btn-primary" type="submit" name="winner" value="<%= pointer+1%>">
+                                <button class="btn btn-primary" type="submit" name="winner" value="<%= secPointer%>">
                                     Like <i class="fa-solid fa-thumbs-up"></i></i>
                                 </button>
                             </div>
