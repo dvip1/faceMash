@@ -1,2 +1,17 @@
 <%- include('partials/header')-%>
-<%- include('partials/footer')-%>
+    <div class="center">
+        <div class="container my-container">
+
+            <h1>
+                <%=name%>'s favs
+            </h1>
+            <ol>
+                <% for(let i=sorted.length-1; i>=0; i--) {%>
+                    <li>
+                        <%=sorted[i].name%>
+                    </li>
+                    <%}%>
+            </ol>
+        </div>
+    </div>
+    <%- include('partials/footer')-%>

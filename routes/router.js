@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const teacherArr = require('../Database/data');
+const _= require('lodash');
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: true }));
 const elo = require('../func/elo');
-const winnerLoser = require('../func/winnerLoser');
 //declaring variables for  iterating;
 const i = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 3, 5];
 const j = [7, 6, 5, 4, 6, 5, 4, 7, 5, 4, 7, 6, 4, 7, 6, 5, 3, 2, 7, 6];
@@ -41,7 +41,7 @@ router.post('/round1', (req, res) => {
     req.session.teacherArr[req.session.loserP].score += req.session.objectElo.newRatingB;
 
     //redirecting using condition
-    if (req.session.counter > i.length)
+    if (req.session.counter > i.length-1)
         res.redirect('/round2');
     else {
         req.session.counter++;
@@ -51,8 +51,8 @@ router.post('/round1', (req, res) => {
 router.get('/round2', (req, res) => {
     if (req.session.name == "")
         res.redirect('/');
-
-    res.render('round2');
+    req.session.sorted= _.sortBy(req.session.teacherArr,['score']);
+    res.render('round2', {name: req.session.name, sorted: req.session.sorted});
     console.log(req.session.teacherArr);
 })
 module.exports = router;

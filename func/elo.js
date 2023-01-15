@@ -15,23 +15,23 @@
     }
     get newRatingA(){
         if(this.whoWins){
-            this.rating1= this.rating1+ 32*(1-this.probA);
-            this.rating2= this.rating2+ 32*(0-this.probB);
+            this.rating1=  32*(1-this.probA);
+            this.rating2=  32*(0-this.probB);
         }
         else{
-            this.rating2= this.rating2+ 32*(1-this.probB);
-            this.rating1= this.rating1+ 32*(0-this.probA);
+            this.rating2=  32*(1-this.probB);
+            this.rating1=  32*(0-this.probA);
         }
         return parseInt(this.rating1);
     }
     get newRatingB(){
         if(this.whoWins){
-            this.rating1= this.rating1+ 32*(1-this.probA);
-            this.rating2= this.rating2+ 32*(0-this.probB);
+            this.rating1=  32*(1-this.probA);
+            this.rating2=  32*(0-this.probB);
         }
         else{
-            this.rating2= this.rating2+ 32*(1-this.probB);
-            this.rating1= this.rating1+ 32*(0-this.probA);
+            this.rating2=  32*(1-this.probB);
+            this.rating1=  32*(0-this.probA);
         }
         return parseInt(this.rating2);
     }
