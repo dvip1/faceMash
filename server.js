@@ -17,6 +17,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use('/', homeRoute );
 app.listen(port, () => {
-	console.log(`Server running on port ${ip +":"+port}`)
+	console.log(`Server running on port ${port}`)
 })
 module.exports= app;
