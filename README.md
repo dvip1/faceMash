@@ -30,7 +30,7 @@ This is a project that allows users to compare teachers at their school and dete
 
 ## Contributing
 - Fork the repository
-- Clone the repository `git clone  https://github.com/dvip1/faceMash.git `
+- Clone the repository `git clone  https://github.com/<user-name>/faceMash.git`
 - Create a new branch `git checkout -b <branch-name>`
 - Make the changes
 - Commit the changes `git commit -m "<commit-message>"`
