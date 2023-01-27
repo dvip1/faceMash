@@ -34,7 +34,7 @@ This is a project that allows users to compare teachers at their school and dete
 - Create a new branch `git checkout -b <branch-name>`
 - Make the changes
 - Commit the changes `git commit -m "<commit-message>"`
-- Creat a pull request
+- Create a pull request
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details
