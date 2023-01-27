@@ -44,4 +44,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 - etc
 
 ## Screenshots
-![Screenshot](https://github.com/dvip1/faceMash/blob/5df92046ba331351ad3b2e9aba085432e796f59b/public/images/Screenshot%202023-01-27%20at%2022-20-49%20Document.png)
+![Screenshot](public/images/Screenshot.png)
